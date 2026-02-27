@@ -1,0 +1,172 @@
+/* Solvezyo Logo Styles - Plain CSS Version */
+
+.solvezyo-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+  cursor: default;
+}
+
+.solvezyo-logo-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated Background Rings */
+.solvezyo-logo-bg-ring {
+  position: absolute;
+  inset: 0;
+  background: rgba(93, 95, 225, 0.2);
+  border-radius: 0.75rem;
+  filter: blur(16px);
+  transition: background-color 0.5s ease;
+}
+
+.solvezyo-logo:hover .solvezyo-logo-bg-ring {
+  background: rgba(93, 95, 225, 0.3);
+}
+
+/* Main Icon Container */
+.solvezyo-logo-icon {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #5d5fe1 0%, rgba(93, 95, 225, 0.9) 50%, rgba(93, 95, 225, 0.8) 100%);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(93, 95, 225, 0.2);
+  transition: box-shadow 0.5s ease;
+}
+
+.solvezyo-logo:hover .solvezyo-logo-icon {
+  box-shadow: 0 10px 25px -5px rgba(93, 95, 225, 0.3);
+}
+
+/* Logo SVG */
+.solvezyo-logo-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+.solvezyo-logo-path {
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-width 0.5s ease;
+}
+
+.solvezyo-logo:hover .solvezyo-logo-path {
+  stroke-width: 3;
+}
+
+.solvezyo-logo-dot {
+  cx: 12;
+  cy: 12;
+  r: 1;
+  fill: currentColor;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Mechanical accent lines */
+.solvezyo-logo-accent-1 {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #5d5fe1;
+  transition: transform 0.5s ease;
+  transition-delay: 0.1s;
+}
+
+.solvezyo-logo-accent-2 {
+  position: absolute;
+  bottom: -0.25rem;
+  left: -0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #5d5fe1;
+  transition: transform 0.5s ease;
+  transition-delay: 0.2s;
+}
+
+.solvezyo-logo:hover .solvezyo-logo-accent-1,
+.solvezyo-logo:hover .solvezyo-logo-accent-2 {
+  transform: scale(1.25);
+  border-color: #5d5fe1;
+}
+
+/* Text Styles */
+.solvezyo-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.solvezyo-logo-brand {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #131112;
+  transition: all 0.5s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.solvezyo-logo:hover .solvezyo-logo-brand {
+  color: #131112;
+}
+
+.solvezyo-logo-brand-primary {
+  color: #5d5fe1;
+  transition: color 0.5s ease;
+}
+
+.solvezyo-logo:hover .solvezyo-logo-brand-primary {
+  color: #5d5fe1;
+}
+
+.solvezyo-logo-subtitle {
+  font-size: 0.70rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: #64748b;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .solvezyo-logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .solvezyo-logo-svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .solvezyo-logo-brand {
+    font-size: 1.75rem;
+  }
+}
